@@ -1,0 +1,23 @@
+{
+  "name": "trip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-serve": "npx http-serve",
+    "develop": "npx eslint **",
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  }
+}

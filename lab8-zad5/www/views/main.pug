@@ -1,0 +1,48 @@
+extends layout.pug 
+block head 
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Biuro podr&oacute;&zdot;y
+    link(rel='icon' type='image/x-icon' href='images/favicon.ico')
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='stylesheet' href='css/main.css')
+block content
+  main
+    #trips
+      each trip in trips_list
+          - var trip_id=trip.id
+          article.trip
+            a(href='trip?trip_id=' + trip.id)
+              img(src=trip.img_src alt=trip.img_alt)
+            .trip-description
+              a(href='trip')
+                h1=trip.name
+              span.description Kr&oacute;tka wycieczka z wej&sacute;ciem na ten w&lstrok;a&sacute;nie szczyt.
+              .trip-price
+                span.price Cena: 15002900
+                a(href='book') Zarezerwuj
+    aside
+      section#promos
+        h2 Promocje
+        article.promo
+          h3 G&oacute;ry wysokie
+          span.trip-date 1-31 lutego
+          a(href='book') Rezerwuj
+        article.promo
+          h3 Inne miejsce
+          span.trip-date 17-18 kwietnia
+          a(href='book') Rezerwuj
+        article.promo
+          h3 Te&zdot; gdzie&sacute;
+          span.trip-date w listopadzie
+          a(href='book') Rezerwuj
+        article.promo
+          h3 Warszawa
+          span.trip-date ci&aogon;gle
+          a(href='book') Rezerwuj
+      section#advices
+        h2 Porady
+        a(href='') Co zabra&cacute; na wycieczk&eogon;?
+        a(href='') Kiedy najlepiej wyjecha&cacute;?
+        a(href='') Jakie buty s&aogon; najwygodniejsze?

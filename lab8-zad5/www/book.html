@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book.css">
+</head>
+
+<body>
+    <header>
+        <a href="main.html"><img src="images/logo.png" alt="Logo biura podróży"></a>
+        <a href="/">Wycieczki lotnicze</a>
+        <a href="/">Wycieczki autokarowe</a>
+        <a href="/">Moje konto</a>
+    </header>
+    <main>
+        <section id="trip_informations">
+            <img src="images/trips/szczyt.jpg" alt="Zdjęcie szczytu">
+            <a href="trip.html"><h1>Wspaniała wycieczka</h1></a>
+            <table id="costs">
+                <thead>
+                    <tr>
+                        <th scope="col">Nazwa</th>
+                        <th scope="col">Koszt</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ubezpieczenie</td>
+                        <td>500 PLN</td>
+                    </tr>
+                    <tr>
+                        <td>Bilety</td>
+                        <td>1000 PLN</td>
+                    </tr>
+                    <tr>
+                        <td>Wyżywienie</td>
+                        <td>1000 PLN</td>
+                    </tr>
+                    <tr>
+                        <td>Zakwaterowanie</td>
+                        <td>1000 PLN</td>
+                    </tr>
+                    <tr>
+                        <td>Razem od osoby</td>
+                        <td>3000 PLN</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Formularz rezerwacyjny</h2>
+        </section>
+        <section id="form">
+            <form method="post">
+                <input type="text" placeholder="Imię" id="first_name" name="first_name" maxlength="40" required>
+                <input type="text" placeholder="Nazwisko" id="last_name" name="last_name" maxlength="40" required>
+                <input type="tel" placeholder="Nr telefonu" id="phone" name="phone" pattern="[0-9]{9}"
+                title="Numer powinien składać się z 9 cyfr." required>
+                <input type="email" placeholder="Adres e-mail" id="email" name="email" required>
+                <input type="number" placeholder="Liczba osób" id="n_people" name="n_people" required min="1" max="4">
+                <label for="gdpr_permission">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z art. 6 ust. 1 lit. a) Rozporządzenia
+                    Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych
+                    w
+                    związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
+                    dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), dalej: „RODO” <br>
+                     (... tutaj powinna być dalsza część wynikająca z przepisów prawa ...)
+                  </label>
+                  <input type="checkbox" id="gdpr_permission" name="gdpr_permission" required>
+                <button type="submit">ZAREZERWUJ</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <span>Biuro podróży, 2022</span>
+        <a href="">O firmie</a>
+        <a href="">Kontakt</a>
+        <a href="">Polityka prywatności</a>
+    </footer>
+</body>
+
+</html>
