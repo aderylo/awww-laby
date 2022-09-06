@@ -73,14 +73,10 @@ describe("DbTests", () => {
 
 describe("Zadanie 3", () => {
   const driver = new Builder().withCapabilities(Capabilities.firefox()).build();
-  const timeout = 100000000;
 
   let db;
   before(async () => {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: timeout, pageLoad: timeout, script: timeout });
-    db = await get_db_postgres();
+    db = await get_db_memory();
     await init_func(db);
   });
 

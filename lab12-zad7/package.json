@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --exit",
+    "test": "node ./node_modules/mocha/bin/mocha -t 10000 --exit",
     "start": "nodemon ./index.mjs",
     "init_db": "node ./database/init_db_sqlite.mjs"
   },
